@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7310b562-e479-48ee-9791-2b9e684f5ecf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="132"/>
+	<property name="ireport.y" value="8"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbl_tampildata]]>
+	</queryString>
+	<field name="nama_pemesan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipe_rumah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="luas_tanah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lama_cicilan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cicilan_per_bulan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="area_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{area}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="702f2cbb-9d61-4621-aecf-ad0c32461ca3" x="355" y="29" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Daftar Penjualan Rumah
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="7e18b2d9-9416-4713-b62d-0f706b6e45dd" x="702" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e2082075-7506-43a2-b933-41a62679d7c8" x="17" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Pemesan
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bb8f5535-b134-4ea4-983d-908b4fdc7f21" x="132" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Area
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89fcd796-ca2b-413f-84c1-a4e85ed93a72" x="255" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tipe Rumah
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="39c6efa6-934c-495c-9aee-bbd5cfde101a" x="387" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Luas Tanah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52d304eb-8072-44c7-b6aa-83c56002edc8" x="518" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f71fd56-3a5a-4fa3-8e33-28319b6c5c7a" x="640" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Lama_cicilan
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="579b9e60-00f5-4a71-b758-da2934cc5c2b" x="752" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cicilan Perbulan
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2cf0d232-c30d-41c5-a440-429ca4f9b4ea" x="17" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_pemesan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="02feac1d-08e5-40a9-97b3-84258ab45b73" x="132" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2f6af839-6b96-4078-8b4a-2d5da48e8579" x="255" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tipe_rumah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="078aa84c-2ae0-4ed7-b3a4-5a2fe7bc181f" x="387" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{luas_tanah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="23cbef7a-ad82-4bd3-8c63-3c579496931f" x="518" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="835d5398-27a3-4bd5-8cef-69b0a47e9e36" x="640" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{lama_cicilan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6d542b24-707b-4a40-b0c3-b4abbafc1614" x="752" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cicilan_per_bulan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
